@@ -1,1 +1,1 @@
-# My solutions for HackerRank challenges
+My solutions for HackerRank SQL challenges
