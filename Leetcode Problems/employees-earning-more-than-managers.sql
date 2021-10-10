@@ -21,11 +21,11 @@ Given the Employee table, write a SQL query that finds out employees who earn mo
 /* Using self join */
 Select E1.Name as Employee
 From Employee E1
-JOIN Employee E2
-ON E2.Id=E1.ManagerId
-Where E1.Salary>E2.Salary;
+         JOIN Employee E2
+              ON E2.Id = E1.ManagerId
+Where E1.Salary > E2.Salary;
 
 /* Using sub-query */
 Select Name As Employee
 From Employee E
-Where Salary > (Select Salary From Employee Where Id=E.ManagerId);
+Where Salary > (Select Salary From Employee Where Id = E.ManagerId);

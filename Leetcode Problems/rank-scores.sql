@@ -26,7 +26,7 @@ For example, given the above Scores table, your query should generate the follow
 
 */
 
-Select Score, 
-(Select count(distinct S.Score) From Scores S Where S.Score >= Scores.Score) As Rank
+Select Score,
+       (Select count(distinct S.Score) From Scores S Where S.Score >= Scores.Score) As Rank
 From Scores
 Order By Rank;

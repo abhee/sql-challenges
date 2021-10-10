@@ -28,5 +28,5 @@ FirstName, LastName, City, State
 
 Select FirstName, LastName, City, State
 From Person P
-LEFT OUTER JOIN Address A
-ON P.PersonId=A.PersonId;
+         LEFT OUTER JOIN Address A
+                         ON P.PersonId = A.PersonId;

@@ -22,4 +22,4 @@ Note: All emails are in lowercase.
 Select Email
 From Person
 Group By Email
-Having count(Email)>1;
+Having count(Email) > 1;

@@ -19,10 +19,10 @@ For example, given the above Employee table, the nth highest salary where n = 2 
 
 CREATE FUNCTION getNthHighestSalary(N INT) RETURNS INT
 BEGIN
-  RETURN (
-      Select Distinct Salary
-      From Employee E
-      Where (Select Count(Distinct Salary) From Employee Where Salary>=E.Salary)=N
-
-  );
+RETURN
+(
+    Select Distinct Salary
+    From Employee E
+    Where (Select Count(Distinct Salary) From Employee Where Salary >= E.Salary) = N
+);
 END
